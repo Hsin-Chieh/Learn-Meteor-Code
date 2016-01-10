@@ -1,34 +1,50 @@
-# Microscope
+Learn to use meteor.js
+<a href="slides.com/hsin-chieh/meteor-js"><h1>Slides:Meteor基本簡介</h1></a>
 
-Microscope is a simple social news app that lets you share links, comment, and vote on them.
+第一步驟
+```    
+    1.meteor create meteor
+    2.cd meteor
+    3.meteor  (In cloud 9 you should use : meteor --port $IP:$PORT  )
+ ```           
+第二步驟
+```    
+        加入 bootstrap underscore
+        4.meteor add twbs:bootstrap
+        5.meteor add underscore
 
-It was built with [Meteor](http://meteor.com) as a companion app to [The Meteor Book](http://themeteorbook.com), and is the "little brother" of [Telescope](http://telesc.pe), the (much more complex) open-source social news app that was the inspiration for the book.
-
-Microscope itself is free and open-source, and is a good example of common Meteor app patterns such as:
-
-- Routing
-- User Accounts
-- Notifications
-- Errors
-- Publications/Subscriptions
-- Permissions
-
-## This Repository
-
-The commits to this repository are organized in a very linear fashion, corresponding to progress throughout the book. Commits are tagged in the format `chapterX-Y`, indicating the `Y`th commit of chapter `X`.
-
-Also, note that as the book focuses on _development_, all CSS is committed in a single commit early on.
-
-### Branches
-
-There are 2 branches in this repository which correspond to advanced code that is covered in sidebars of the book, and outside of the main code progression. They are tagged `sidebarX-Y`, corresponding to the sidebar number in the book.
-
-### Developing on Nitrous.IO
-
-Start hacking on this app on
-[Nitrous.IO](https://www.nitrous.io/?utm_source=github.com&utm_campaign=Microscope&utm_medium=hackonnitrous)
-in seconds:
-
-[![Hack DiscoverMeteor/Microscope on
-Nitrous.IO](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f6045e1949af9d96095b.png)](https://www.nitrous.io/hack_button?source=embed&runtime=nodejs&repo=DiscoverMeteor%2FMicroscope&file_to_open=README.nitrous.md)
-
+    6.mkdir client public lib 
+    7.copy the css file in client/stylesheets/style.css
+    8.copy main.html in client
+    9.copy templates and posts/posts_item/list/js 
+```
+    現在有一個靜態的模板資料了!
+```    
+    10.update the new code on posts_list.html
+    11.create post_item.js
+    12.create lib/collections/posts.js
+    13.create server/fixtures.js
+```
+    試試看在瀏覽器的console裡面使用
+    ```
+            Posts.insert({
+              title: 'Meteor Docs',
+              author: 'Tom Coleman', 
+              url: 'http://docs.meteor.com'
+            });
+    ```        
+第四步驟:加入討論區
+    ```
+        14.meteor remove autopublish //刪除自動枚舉
+        15.copy main.js
+        16.meteor add iron:router
+    ```    
+       
+第五步驟:
+    加入登入
+    ```
+        meteor add ian:accounts-ui-bootstrap-3
+        17.meteor add accounts-password
+        18.copy client/templates/application/layout.html
+        19.copy client/templates/includes/header.html
+    ```    
