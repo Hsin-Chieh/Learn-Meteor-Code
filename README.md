@@ -1,6 +1,14 @@
-Learn to use meteor.js
+#Learn to use meteor.js
+
 <a href="slides.com/hsin-chieh/meteor-js"><h1>Slides:Meteor基本簡介</h1></a>
 
+###直接使用完整程式碼
+``` 
+git clone git@github.com:Hsin-Chieh/Learn-Meteor-Code.git
+cd Learn-Meteor-Code
+meteor ((In cloud 9 you should use : meteor --port $IP:$PORT  ))
+``` 
+###從無到有自己製作
 第一步驟
 ```    
     1.meteor create meteor
@@ -18,7 +26,7 @@ Learn to use meteor.js
     8.copy main.html in client
     9.copy templates and posts/posts_item/list/js 
 ```
-    現在有一個靜態的模板資料了!
+第三步驟、現在有一個靜態的模板資料了!
 ```    
     10.update the new code on posts_list.html
     11.create post_item.js
